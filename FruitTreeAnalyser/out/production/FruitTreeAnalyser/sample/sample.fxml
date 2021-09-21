@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="955.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <tabs>
+    <Tab text="Analyse an Image">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="730.0" prefWidth="955.0">
+               <children>
+                  <Label layoutX="388.0" layoutY="23.0" text="Analyse an Image">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="analysedImage" fitHeight="545.0" fitWidth="902.0" layoutX="27.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="analyseImage" layoutX="478.0" layoutY="641.0" mnemonicParsing="false" onAction="#analyseImage" text="Analyse Image" />
+                  <Label layoutX="40.0" layoutY="644.0" text="Please select the type of fruit for Analysis : ">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="fruitSelection" layoutX="323.0" layoutY="642.0" prefHeight="14.0" prefWidth="129.0" />
+                  <Label layoutX="590.0" layoutY="623.0" text="Total Estimated Amount of Fruits/Clusters : " />
+                  <TextField fx:id="totalFruit" editable="false" layoutX="828.0" layoutY="618.0" prefHeight="26.0" prefWidth="46.0" />
+                  <Label layoutX="590.0" layoutY="659.0" text="Display Number on screen : " />
+                  <ToggleButton fx:id="onScreenLabel" layoutX="749.0" layoutY="654.0" mnemonicParsing="false" onAction="#onScreenLabel" prefHeight="26.0" prefWidth="34.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab fx:id="blackAndWhitePane" text="Black and White Version">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="348.0" layoutY="23.0" text="Black And White Version">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="blackAndWhiteImage" fitHeight="545.0" fitWidth="902.0" layoutX="27.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true" />
+                  <CheckBox fx:id="colorAllFruits" layoutX="66.0" layoutY="625.0" mnemonicParsing="false" onAction="#colourAllFruits" text="Colour all fruits different colour's " />
+                  <CheckBox fx:id="colorSelectedFruits" layoutX="307.0" layoutY="625.0" mnemonicParsing="false" onAction="#colourSelectFruits" text="Colour Selected fruits" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+    <Tab text="Original Image">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="399.0" layoutY="20.0" text="Original Image">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="originalImage" fitHeight="545.0" fitWidth="902.0" layoutX="27.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
